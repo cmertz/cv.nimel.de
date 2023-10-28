@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Christoph Mertz">
+    <meta name="description" content="Christoph Mertz - Curriculum Vitae">
+
+    <title>Christoph Mertz - Curriculum Vitae</title>
+
+    <style type="text/css">
+    * {
+      font-family: Verdana, Geneva, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-size: 12px;
+      color: #555;
+    }
+
+    body {
+      width: 800px;
+      margin: 30px auto;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    #name {
+      color: #4674cb;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 40px;
+    }
+
+    #photo {
+      float: right;
+      border: 1px solid #999;
+      height: 144px;
+      width: 108px;
+    }
+
+    #personal-details {
+      float: left;
+    }
+
+    li, #contact, #address, #other, .index, #development {
+      margin-left: 25px;
+    }
+
+    #contact, #address, #other {
+      float: left;
+      font-size: 13px;
+    }
+
+    #mail {
+      color: #555;
+    }
+
+    #mail:hover {
+      text-decoration: underline;
+    }
+
+    #links {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    #links * {
+      height: 13px;
+      width: 21px;
+    }
+
+    .section-header {
+      color: #4674cb;
+      font-weight: normal;
+      font-size: 24px;
+      border-bottom: thin dashed #4674cb;
+      padding-bottom: 3px;
+      margin-top: 35px;
+    }
+
+    .index {
+      float: left;
+      color: #000;
+    }
+
+    .description {
+      margin-left: 180px;
+    }
+
+    .short {
+      font-style: italic;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .details {
+      margin-top:  5px;
+      margin-left: 10px;
+    }
+
+    .index, .description, li {
+      line-height: 18px;
+    }
+
+    #development, #operations {
+      width: 375px;
+    }
+
+    #development {
+      float: left;
+    }
+
+    #operations {
+      margin-left: 425px;
+    }
+
+    #development, #operations, #operations > ul, #development > ul, .index, .description, #contact, #address, #other {
+      margin-top:  20px;
+    }
+
+    .skilllist > li {
+      margin-top: 5px;
+    }
+
+    @media print {
+      #links {
+        display: none;
+      }
+
+      .pagebreak {
+        page-break-after: always;
+      }
+
+      .noprint {
+        display: none;
+      }
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id="links">
+      <a href="https://github.com/cmertz">
+        <img alt="GitHub Profile" title="GitHub Profile" src='data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDM4LjU0OXB4IiBoZWlnaHQ9IjQzOC41NDlweCIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjU0OSA0MzguNTQ5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTQwOS4xMzIsMTE0LjU3M2MtMTkuNjA4LTMzLjU5Ni00Ni4yMDUtNjAuMTk0LTc5Ljc5OC03OS44QzI5NS43MzYsMTUuMTY2LDI1OS4wNTcsNS4zNjUsMjE5LjI3MSw1LjM2NWMtMzkuNzgxLDAtNzYuNDcyLDkuODA0LTExMC4wNjMsMjkuNDA4Yy0zMy41OTYsMTkuNjA1LTYwLjE5Miw0Ni4yMDQtNzkuOCw3OS44QzkuODAzLDE0OC4xNjgsMCwxODQuODU0LDAsMjI0LjYzYzAsNDcuNzgsMTMuOTQsOTAuNzQ1LDQxLjgyNywxMjguOTA2YzI3Ljg4NCwzOC4xNjQsNjMuOTA2LDY0LjU3MiwxMDguMDYzLDc5LjIyN2M1LjE0LDAuOTU0LDguOTQ1LDAuMjgzLDExLjQxOS0xLjk5NmMyLjQ3NS0yLjI4MiwzLjcxMS01LjE0LDMuNzExLTguNTYyYzAtMC41NzEtMC4wNDktNS43MDgtMC4xNDQtMTUuNDE3Yy0wLjA5OC05LjcwOS0wLjE0NC0xOC4xNzktMC4xNDQtMjUuNDA2bC02LjU2NywxLjEzNmMtNC4xODcsMC43NjctOS40NjksMS4wOTItMTUuODQ2LDFjLTYuMzc0LTAuMDg5LTEyLjk5MS0wLjc1Ny0xOS44NDItMS45OTljLTYuODU0LTEuMjMxLTEzLjIyOS00LjA4Ni0xOS4xMy04LjU1OWMtNS44OTgtNC40NzMtMTAuMDg1LTEwLjMyOC0xMi41Ni0xNy41NTZsLTIuODU1LTYuNTdjLTEuOTAzLTQuMzc0LTQuODk5LTkuMjMzLTguOTkyLTE0LjU1OWMtNC4wOTMtNS4zMzEtOC4yMzItOC45NDUtMTIuNDE5LTEwLjg0OGwtMS45OTktMS40MzFjLTEuMzMyLTAuOTUxLTIuNTY4LTIuMDk4LTMuNzExLTMuNDI5Yy0xLjE0Mi0xLjMzMS0xLjk5Ny0yLjY2My0yLjU2OC0zLjk5N2MtMC41NzItMS4zMzUtMC4wOTgtMi40MywxLjQyNy0zLjI4OWMxLjUyNS0wLjg1OSw0LjI4MS0xLjI3Niw4LjI4LTEuMjc2bDUuNzA4LDAuODUzYzMuODA3LDAuNzYzLDguNTE2LDMuMDQyLDE0LjEzMyw2Ljg1MWM1LjYxNCwzLjgwNiwxMC4yMjksOC43NTQsMTMuODQ2LDE0Ljg0MmM0LjM4LDcuODA2LDkuNjU3LDEzLjc1NCwxNS44NDYsMTcuODQ3YzYuMTg0LDQuMDkzLDEyLjQxOSw2LjEzNiwxOC42OTksNi4xMzZjNi4yOCwwLDExLjcwNC0wLjQ3NiwxNi4yNzQtMS40MjNjNC41NjUtMC45NTIsOC44NDgtMi4zODMsMTIuODQ3LTQuMjg1YzEuNzEzLTEyLjc1OCw2LjM3Ny0yMi41NTksMTMuOTg4LTI5LjQxYy0xMC44NDgtMS4xNC0yMC42MDEtMi44NTctMjkuMjY0LTUuMTRjLTguNjU4LTIuMjg2LTE3LjYwNS01Ljk5Ni0yNi44MzUtMTEuMTRjLTkuMjM1LTUuMTM3LTE2Ljg5Ni0xMS41MTYtMjIuOTg1LTE5LjEyNmMtNi4wOS03LjYxNC0xMS4wODgtMTcuNjEtMTQuOTg3LTI5Ljk3OWMtMy45MDEtMTIuMzc0LTUuODUyLTI2LjY0OC01Ljg1Mi00Mi44MjZjMC0yMy4wMzUsNy41Mi00Mi42MzcsMjIuNTU3LTU4LjgxN2MtNy4wNDQtMTcuMzE4LTYuMzc5LTM2LjczMiwxLjk5Ny01OC4yNGM1LjUyLTEuNzE1LDEzLjcwNi0wLjQyOCwyNC41NTQsMy44NTNjMTAuODUsNC4yODMsMTguNzk0LDcuOTUyLDIzLjg0LDEwLjk5NGM1LjA0NiwzLjA0MSw5LjA4OSw1LjYxOCwxMi4xMzUsNy43MDhjMTcuNzA1LTQuOTQ3LDM1Ljk3Ni03LjQyMSw1NC44MTgtNy40MjFzMzcuMTE3LDIuNDc0LDU0LjgyMyw3LjQyMWwxMC44NDktNi44NDljNy40MTktNC41NywxNi4xOC04Ljc1OCwyNi4yNjItMTIuNTY1YzEwLjA4OC0zLjgwNSwxNy44MDItNC44NTMsMjMuMTM0LTMuMTM4YzguNTYyLDIxLjUwOSw5LjMyNSw0MC45MjIsMi4yNzksNTguMjRjMTUuMDM2LDE2LjE4LDIyLjU1OSwzNS43ODcsMjIuNTU5LDU4LjgxN2MwLDE2LjE3OC0xLjk1OCwzMC40OTctNS44NTMsNDIuOTY2Yy0zLjksMTIuNDcxLTguOTQxLDIyLjQ1Ny0xNS4xMjUsMjkuOTc5Yy02LjE5MSw3LjUyMS0xMy45MDEsMTMuODUtMjMuMTMxLDE4Ljk4NmMtOS4yMzIsNS4xNC0xOC4xODIsOC44NS0yNi44NCwxMS4xMzZjLTguNjYyLDIuMjg2LTE4LjQxNSw0LjAwNC0yOS4yNjMsNS4xNDZjOS44OTQsOC41NjIsMTQuODQyLDIyLjA3NywxNC44NDIsNDAuNTM5djYwLjIzN2MwLDMuNDIyLDEuMTksNi4yNzksMy41NzIsOC41NjJjMi4zNzksMi4yNzksNi4xMzYsMi45NSwxMS4yNzYsMS45OTVjNDQuMTYzLTE0LjY1Myw4MC4xODUtNDEuMDYyLDEwOC4wNjgtNzkuMjI2YzI3Ljg4LTM4LjE2MSw0MS44MjUtODEuMTI2LDQxLjgyNS0xMjguOTA2QzQzOC41MzYsMTg0Ljg1MSw0MjguNzI4LDE0OC4xNjgsNDA5LjEzMiwxMTQuNTczeiIvPjwvZz48L3N2Zz4='>
+      </a>
+      <a href="https://de.linkedin.com/in/christophmertz">
+        <img alt="LinkedIn Profile" title="LinkedIn Profile" src='data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDM4LjUzNnB4IiBoZWlnaHQ9IjQzOC41MzVweCIgdmlld0JveD0iMCAwIDQzOC41MzYgNDM4LjUzNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjUzNiA0MzguNTM1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHJlY3QgeD0iNS40MjQiIHk9IjE0NS44OTUiIHdpZHRoPSI5NC4yMTYiIGhlaWdodD0iMjgyLjkzMiIvPjxwYXRoIGQ9Ik00MDguODQyLDE3MS43MzljLTE5Ljc5MS0yMS42MDQtNDUuOTY3LTMyLjQwOC03OC41MTItMzIuNDA4Yy0xMS45OTEsMC0yMi44OTEsMS40NzUtMzIuNjk1LDQuNDI3Yy05LjgwMSwyLjk1LTE4LjA3OSw3LjA4OS0yNC44MzgsMTIuNDE5Yy02Ljc1NSw1LjMzLTEyLjEzNSwxMC4yNzgtMTYuMTI5LDE0Ljg0NGMtMy43OTgsNC4zMzctNy41MTIsOS4zODktMTEuMTM2LDE1LjEwNHYtNDAuMjMyaC05My45MzVsMC4yODgsMTMuNzA2YzAuMTkzLDkuMTM5LDAuMjg4LDM3LjMwNywwLjI4OCw4NC41MDhjMCw0Ny4yMDUtMC4xOSwxMDguNzc3LTAuNTcyLDE4NC43MjJoOTMuOTMxVjI3MC45NDJjMC05LjcwNSwxLjA0MS0xNy40MTIsMy4xMzktMjMuMTI3YzQtOS43MTIsMTAuMDM3LTE3Ljg0MywxOC4xMzEtMjQuNDA3YzguMDkzLTYuNTcyLDE4LjEzLTkuODU1LDMwLjEyNS05Ljg1NWMxNi4zNjQsMCwyOC40MDcsNS42NjIsMzYuMTE3LDE2Ljk4N2M3LjcwNywxMS4zMjQsMTEuNTYxLDI2Ljk4LDExLjU2MSw0Ni45NjZWNDI4LjgyaDkzLjkzMVYyNjYuNjY0QzQzOC41MjksMjI0Ljk3Niw0MjguNjM5LDE5My4zMzYsNDA4Ljg0MiwxNzEuNzM5eiIvPjxwYXRoIGQ9Ik01My4xMDMsOS43MDhjLTE1Ljc5NiwwLTI4LjU5NSw0LjYxOS0zOC40LDEzLjg0OEM0Ljg5OSwzMi43ODcsMCw0NC40NDEsMCw1OC41MjljMCwxMy44OTEsNC43NTgsMjUuNTA1LDE0LjI3NSwzNC44MjljOS41MTQsOS4zMjUsMjIuMDc4LDEzLjk5LDM3LjY4NSwxMy45OWgwLjU3MWMxNS45OSwwLDI4Ljg4Ny00LjY2MSwzOC42ODgtMTMuOTljOS44MDEtOS4zMjQsMTQuNjA2LTIwLjkzNCwxNC40MTctMzQuODI5Yy0wLjE5LTE0LjA4Ny01LjA0Ny0yNS43NDItMTQuNTYxLTM0Ljk3M0M4MS41NjIsMTQuMzIzLDY4LjksOS43MDgsNTMuMTAzLDkuNzA4eiIvPjwvZz48L3N2Zz4='>
+      </a>
+    </div>
+
+    <div id="personal-details">
+      <h1 id="name">Christoph Mertz</h1>
+      <div id="other">
+        born 1984<br/>
+        french nationality<br/>
+        living in Berlin, Germany<br/><br />
+      </div>
+    </div>
+
+    <img id="photo" alt="photograph of Christoph Mertz" src="./photo.jpg" />
+
+    <div style="clear: both;"></div>
+
+    <h2 class="section-header">Experience</h2>
+
+    <div class="index">since aug 2021</div>
+    <div class="description">
+      <div class="short">Senior Cloud Platform Engineer</div>
+      <div class="details">Building a platform for distributed computations to enable federated learning.
+        <ul>
+          <li>evolving the cloud infrastructure through two major iterations to move from an MVP to a production ready system, including coordinating a series of external penetration tests</li>
+          <li>delivering turn-key solutions for client managed computation environments supporting multiple computation executors</li>
+          <li>interfacing with cloud teams of customers for support and customization</li>
+          <li>screening, interviewing and on-boarding across several engineering functions as the company scales out</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">feb 2021 - may 2021</div>
+    <div class="description">
+      <div class="short">Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Remote)</div>
+      <div class="details">Optimization of a new gitops system for an increased deployment velocity for the developer productivity engineering team
+        <ul>
+          <li>automated migration of helm based kubernetes workloads to kustomize (helm2/3, kustomize, fluxcd2, python)</li>
+          <li>implementation of automated kubernetes manifest validation for development teams (some 500k lines of yaml, openapi, open policy agent, rego)</li>
+          <li>debugging and removal of performance bottlenecks and throughput issues in the gitops system (fluxcd2, golang, git)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">aug 2020 - dec 2020</div>
+    <div class="description">
+      <div class="short">Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Freelance, Remote)</div>
+      <div class="details">Modernization of the existing infrastructure as code setup for google cloud for the developer productivity engineering team
+        <ul>
+          <li>automation of provisioning and maintenance of production and pre-production kubernetes clusters (kubernetes, gke, pulumi-python, jenkins)</li>
+          <li>implementation of a gitops system for kubernetes to replace an aging fleet of Jenkins servers (fluxcd2, golang, git)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">july 2019 - nov 2020</div>
+    <div class="description">
+      <div class="short">Lead Cloud Engineer for elearnio GmbH (Freelance, Remote)</div>
+      <div class="details">Provided elearnio with a standardized and automated delivery system and cloud infrastructure, enabling high delivery velocity and optimized for operator time.
+        <ul>
+          <li>implementation of aws ecs based clusters (aws ecs, fargate, terraform)</li>
+          <li>setup and maintenance of a continuous delivery system (gitlab ci, terraform, ruby)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">mar 2018 - oct 2019</div>
+    <div class="description">
+      <div class="short">Lead Infrastructure Engineer for Shuttle Holdings (Freelance, Remote)</div>
+      <div class="details">In charge of infrastructure development for a white-label cryptocurrency exchange product.
+        <ul>
+          <li>implementation of kubernetes based system (kubernetes, helm, golang) and continuous delivery system (gitlab, cloudbuild) for a fleet of 40 distinct services over multiple environments</li>
+          <li>setup and operations of crypto-currency nodes, notably a setup for a full archive ethereum node reaching the performance limits of GCP offerings at the time (and one of a handful of nodes with a similar setup worldwide in 2018)</li>
+          <li>vendoring of (almost) the entirety of the systems dependencies to protect against targeted attacks (npm, golang, docker)</li>
+          <li>setup of a highly available KDB+ based ticker system for cryptocurrency pairs</li>
+          <li>building reliability into the core product (golang)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pagebreak"> </div>
+
+    <div class="index">oct 2016 - feb 2018</div>
+    <div class="description">
+      <div class="short">Senior Software Engineer at Fraugster Ltd. (Berlin, Germany)</div>
+      <div class="details">Development of an artificial intelligence based system for online fraud detection of credit card transactions
+        <ul>
+          <li>implementation of features for fraugsters main ai engine (golang)</li>
+          <li>migration of the main ai engine to a container orchestrator (docker, kubernetes)</li>
+          <li>development of a platform for analytical simulations, model training and backtesting (kafka, postgresql, golang)</li>
+          <li>leading job interviews for software engineers and site reliability engineers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">apr 2014 - mar 2016</div>
+    <div class="description">
+      <div class="short">Senior Software Engineer at Aroundhome (Remote / Berlin, Germany)</div>
+      <div class="details">I built the operations function (which was previously carried by the software development team) from scratch and was in charge of the maintenance and evolution of the application server infrastructure (bare metal)
+        <ul>
+          <li>implementation of configuration management and operation of the application server cluster (chef, Debian GNU/Linux, ~60 servers) and the companys load-balancers and reverse proxy servers (nginx)</li>
+          <li>setup of the monitoring infrastructure (logstash, elasticsearch, kibana, graphite, golang, ~3k events/s)</li>
+          <li>prototyping of a container based application server cluster and deployment infrastructure (coreos, kubernetes, docker, golang)</li>
+          <li>consulting for development teams</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">may 2012 - apr 2014</div>
+    <div class="description">
+      <div class="short">Software Engineer at Aroundhome (Berlin, Germany)</div>
+      <div class="details">Driving modernization initiatives for a Ruby on Rails monolith
+        <ul>
+          <li>Development of a high volume service for matching end customer requests to vendor offers focused on optimizing for customer preferences and global revenue optimization (ruby, mysql, redis)</li>
+          <li>Implementation of a numeric simulation based approach for automated search engine advertisement (ruby, mysql) in collaboration with the BI team, reducing initial simulation time from ~6h to ~30min over two major iterations</li>
+          <li>onboarding and mentoring of junior developers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">nov 2009 - jan 2012</div>
+    <div class="description">
+      <div class="short">Software Engineer at Verti Versicherung AG (Teltow, Germany)</div>
+      <div class="details">Development of an IBM mainframe based multi-tier insurance system
+        <ul>
+          <li>development and maintenance of a mainframe based middleware (IBM CICS, CTG, WAS) used by several country subsidiaries</li>
+          <li>coordination between development teams of Direct Line Italy and RBS insurance India</li>
+          <li>implementation of enterprise application components (java se, spring)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">apr 2008 - apr 2009</div>
+    <div class="description">
+      <div class="short">Student research assistant at the Fraunhofer Institute for Open Communication Systems (Berlin, Germany)</div>
+      <div class="details">In charge of technical implementation in the context of the Autonomic Network Architecture Project (Information Society Technology, FP6) for the competence center Network Research
+        <ul>
+          <li>design of an adaptive monitoring system for ANA</li>
+          <li>specification and implementation of network-monitoring components (c99, GTK)</li>
+          <li>representation of the project at the ICT 2008, attendence to project-meetings and work on deliverables for the EU</li>
+          <li>Diploma Thesis in the context of the project</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">july 2007 - feb 2008</div>
+    <div class="description">
+      <div class="short">Intern at IBM Deutschland Research & Development GmbH (Böblingen, Germany)</div>
+      <div class="details">Development of a system to automate deployments of VM based environments for build verification tests in software development
+        <ul>
+          <li>design and setup of VMware clusters and SANs for VM-provisioning (vmware vi, rhel, debian, ibm x series, ibm ds4000)</li>
+          <li>development of components for the in-house monitoring solution (java se, php, c99)</li>
+          <li>documentation and user support (2nd, 3rd level)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">apr 2007 - apr 2009</div>
+    <div class="description">
+      <div class="short">Systems administrator at ubuntu-eu.org (Remote)</div>
+      <div class="details">Hosting and administration for european ubuntu locoteams, notably ubuntu-fr.org and ubuntuusers.de, with about 150.000 unique visitors a day
+        <ul>
+          <li>system-administration of the web cluster (ubuntu)</li>
+          <li>setup and administration of the mail system (exim, mailman, postfix)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="index">2007</div>
+    <div class="description">
+      <div class="short">Software Developer for Anterist+Schneider Automotive GmbH (Freelance, Saarlouis, Germany)</div>
+      <div class="details">Development of an application to support planning of internal logistics, especially pick routes for orders</div>
+    </div>
+
+    <div class="pagebreak"> </div>
+
+    <div class="index noprint">2003</div>
+    <div class="description">
+      <div class="short">Intern at IKS, communal IT service provider for the city of Saarbrücken (Germany)</div>
+      <div class="details">1st level support for Windows workstations in the cities offices</div>
+    </div>
+
+    <div class="index noprint">1999</div>
+    <div class="description">
+      <div class="short">Intern at Anterist+Schneider GmbH (Saarbrücken, Germany)</div>
+      <div class="details">Worked with the senior staff on the companys token ring installation</div>
+    </div>
+
+    <h2 class="section-header">Skills</h2>
+
+    <div id="development">
+      <div class="short">Software Development</div>
+      <ul class="skilllist">
+        <li>experience with different programming languages, paradigms and ecosystems (java, ruby, golang, c, perl, php, lua) with an emphasis on ruby and golang</li>
+        <li>agile software development practices and frameworks (tdd, pair programming, scrum, kanban)</li>
+        <li>defining software architecture and knowledge of common design pattern</li>
+        <li>setup and ownership of development infrastructure, integration and deployment processes (gitlab, capistrano, jenkins, continuum, maven, git, svn)</li>
+      </ul>
+    </div>
+
+    <div id="operations">
+      <div class="short">Operations</div>
+      <ul class="skilllist">
+        <li>18 years of experience managing linux servers in diverse settings (debian, ubuntu, rhel, coreos, alpine)</li>
+        <li>proficient with configuration management and task automation (bash, ruby, golang, multi dc, chef) as well as infrastructure as code (terraform, pulumi) tools </li>
+        <li>knowledge of container (mostly docker) and virtualization technologies (virtualbox, kvm, vagrant, vmware enterprise products)</li>
+        <li>experience with kubernetes (v1.0.13-v1.22)</li>
+        <li>experience with Google Cloud Platform offerings (especially gke) and Amazon Web Services (ec2, ecs, eks, fargate)</li>
+        <li>log event and time series based monitoring (elasticsearch, logstash, fluentd, kibana, collectd, influxdb, graphite, grafana, some prometheus)</li>
+      </ul>
+    </div>
+
+    <div style="clear: both;"></div>
+
+
+    <h2 class="section-header">Education</h2>
+
+    <div class="index">2011</div>
+    <div class="description">
+      <div class="short">ITIL v3 Foundation</div>
+    </div>
+
+    <div class="index">2009</div>
+    <div class="description">
+      <div class="short">Sun Certified Programmer for the Java Platform</div>
+    </div>
+
+    <div class="index">2009</div>
+    <div class="description">
+      <div class="short">Diplom (FH) in Informatik</div>
+      <div class="details">University of applied sciences Saarbrücken, Germany</div>
+    </div>
+
+    <div class="index">2009</div>
+    <div class="description">
+      <div class="short">Maîtrise en génie mathématique et informatique</div>
+      <div class="details">Paul Verlaine University Metz, France</div>
+    </div>
+
+    <div class="index">2008</div>
+    <div class="description">
+      <div class="short">IBM zSummer university</div>
+    </div>
+
+    <div class="index">2006</div>
+    <div class="description">
+      <div class="short">B.Sc. in Computer Science</div>
+      <div class="details">Paul Verlaine University Metz, France</div>
+    </div>
+
+    <div class="index">2003 - 2009</div>
+    <div class="description">
+      <div class="short">Studies in Computer Science</div>
+      <div class="details">Institut supérieur franco-allemand de techniques, d'économies et de sciences (ISFATES)</div>
+    </div>
+
+    <div class="index">2003</div>
+    <div class="description">
+      <div class="short">French and german university entrance diploma</div>
+      <div class="details">Deutsch-Französisches Gymnasium Saarbrücken, Germany</div>
+    </div>
+  </body>
+</html>
