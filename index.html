@@ -13,16 +13,23 @@
       font-family: Verdana, Geneva, sans-serif;
       padding: 0;
       margin: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Base font size for rem calculations */
+      font-size: 16px;
+      --primary-color: #4674cb;
+      --text-color: #555;
     }
 
     body {
-      font-size: 12px;
-      color: #555;
-    }
-
-    body {
-      width: 800px;
-      margin: 30px auto;
+      font-size: 0.875rem; /* 14px equivalent */
+      color: var(--text-color);
+      width: 90%;
+      max-width: 50rem; /* 800px equivalent */
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     a {
@@ -34,34 +41,36 @@
     }
 
     #name {
-      color: #4674cb;
+      color: var(--primary-color);
       text-decoration: none;
       font-weight: normal;
-      font-size: 40px;
+      font-size: 2.5rem; /* 40px equivalent */
     }
 
     #photo {
       float: right;
-      border: 1px solid #999;
-      height: 144px;
-      width: 108px;
+      border: 0.0625rem solid #999;
+      height: 9rem; /* 144px equivalent */
+      width: 6.75rem; /* 108px equivalent */
     }
 
     #personal-details {
       float: left;
+      max-width: calc(100% - 8rem);
     }
 
     li, #contact, #address, #other, .index, #development {
-      margin-left: 25px;
+      margin-left: 1.5625rem;
     }
 
     #contact, #address, #other {
       float: left;
-      font-size: 13px;
+      font-size: 0.8125rem;
     }
 
     #mail {
-      color: #555;
+      color: var(--text-color);
+      word-break: break-word;
     }
 
     #mail:hover {
@@ -70,22 +79,22 @@
 
     #links {
       position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 0.625rem;
+      top: 0.625rem;
     }
 
     #links * {
-      height: 13px;
-      width: 21px;
+      height: 0.8125rem;
+      width: 1.3125rem;
     }
 
     .section-header {
-      color: #4674cb;
+      color: var(--primary-color);
       font-weight: normal;
-      font-size: 24px;
-      border-bottom: thin dashed #4674cb;
-      padding-bottom: 3px;
-      margin-top: 35px;
+      font-size: 1.5rem;
+      border-bottom: thin dashed var(--primary-color);
+      padding-bottom: 0.1875rem;
+      margin-top: 2.1875rem;
     }
 
     .index {
@@ -94,26 +103,26 @@
     }
 
     .description {
-      margin-left: 180px;
+      margin-left: 11.25rem;
     }
 
     .short {
       font-style: italic;
       color: #000;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
     .details {
-      margin-top:  5px;
-      margin-left: 10px;
+      margin-top: 0.3125rem;
+      margin-left: 0.625rem;
     }
 
     .index, .description, li {
-      line-height: 18px;
+      line-height: 1.125rem;
     }
 
     #development, #operations {
-      width: 375px;
+      width: 23.4375rem;
     }
 
     #development {
@@ -121,15 +130,84 @@
     }
 
     #operations {
-      margin-left: 425px;
+      margin-left: 26.5625rem;
     }
 
-    #development, #operations, #operations > ul, #development > ul, .index, .description, #contact, #address, #other {
-      margin-top:  20px;
+    #development, #operations, #operations > ul, #development > ul,
+    .index, .description, #contact, #address, #other {
+      margin-top: 1.25rem;
     }
 
     .skilllist > li {
-      margin-top: 5px;
+      margin-top: 0.3125rem;
+    }
+
+    /* Responsive breakpoints */
+    @media (max-width: 48rem) { /* 768px */
+      body {
+        margin: 1.25rem auto;
+        width: 95%;
+      }
+
+      #name {
+        font-size: 2rem;
+        word-wrap: break-word;
+      }
+
+      .section-header {
+        font-size: 1.25rem;
+        margin-top: 1.5625rem;
+      }
+
+      .description {
+        margin-left: 7.5rem;
+      }
+
+      li, #contact, #address, #other, .index, #development {
+        margin-left: 0.9375rem;
+      }
+
+      #development, #operations {
+        width: 100%;
+        float: none;
+      }
+
+      #operations {
+        margin-left: 0;
+      }
+
+      #links {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: center;
+        margin: 1.25rem 0;
+      }
+    }
+
+    @media (max-width: 30rem) { /* 480px */
+      #photo {
+        float: none;
+        display: block;
+        margin: 1.25rem auto;
+      }
+
+      #personal-details {
+        float: none;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .index {
+        float: none;
+        margin-bottom: 0.625rem;
+        font-weight: bold;
+      }
+
+      .description {
+        margin-left: 0.9375rem;
+        margin-bottom: 1.5625rem;
+      }
     }
 
     @media print {
@@ -143,6 +221,12 @@
 
       .noprint {
         display: none;
+      }
+
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
       }
     }
     </style>
