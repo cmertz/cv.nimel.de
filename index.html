@@ -9,7 +9,8 @@
 		<title>Christoph Mertz - Curriculum Vitae</title>
 
 		<style type="text/css">
-		/* proudly brought to you by an adventurous mix of LLMs */
+		/* the following mess is proudly brought to you by an adventurous mix of LLMs */
+
 		* {
 			font-family: Verdana, Geneva, sans-serif;
 			padding: 0;
@@ -79,7 +80,13 @@
 		}
 
 		#other {
-			font-size: var(--base-font-size);
+			margin-top: calc(var(--section-spacing) / 2);
+			margin-left: calc(var(--section-spacing) / 3);
+			font-size: calc(var(--base-font-size) / 1.25);
+		}
+
+		.timeline-entry {
+			margin-left: calc(var(--section-spacing) / 3);
 		}
 
 		#links {
@@ -109,6 +116,10 @@
 			margin-left: clamp(1rem, 3vw, 1.5625rem);
 			line-height: 1.4;
 			font-size: var(--base-font-size);
+		}
+
+		#development {
+			margin-left: calc(var(--section-spacing) / 3);
 		}
 
 		#development, #operations {
@@ -266,6 +277,7 @@
 			}
 
 			#development, #operations {
+				margin-left: 0;
 				width: 48%;
 				page-break-inside: avoid;
 				break-inside: avoid;
@@ -339,7 +351,7 @@
 
 		<h2 class="section-header">Experience</h2>
 
-		<div>
+		<div class="timeline-entry">
 			<div class="index">since aug 2021</div>
 			<div class="description">
 				<div class="short">Staff Engineer at Apheris AI GmbH (Berlin / Remote)</div>
@@ -355,7 +367,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="timeline-entry">
 			<div class="index">feb 2021 - may 2021</div>
 			<div class="description">
 				<div class="short">Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Remote)</div>
@@ -369,7 +381,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="timeline-entry">
 			<div class="index">aug 2020 - dec 2020</div>
 			<div class="description">
 				<div class="short">Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Freelance, Remote)</div>
@@ -382,7 +394,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="timeline-entry">
 			<div class="index">july 2019 - nov 2020</div>
 			<div class="description">
 				<div class="short">Lead Cloud Engineer for elearnio GmbH (Freelance, Remote)</div>
@@ -395,7 +407,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="timeline-entry">
 			<div class="index">mar 2018 - oct 2019</div>
 			<div class="description">
 				<div class="short">Lead Infrastructure Engineer for Shuttle Holdings (Freelance, Remote)</div>
@@ -409,202 +421,220 @@
 					</ul>
 				</div>
 			</div>
+		</div>
 
-			<div>
-				<div class="index">oct 2016 - feb 2018</div>
-				<div class="description">
-					<div class="short">Senior Software Engineer at Fraugster Ltd. (Berlin, Germany)</div>
-					<div class="details">Development of an artificial intelligence based system for online fraud detection of credit card transactions
-						<ul>
-							<li>implementation of features for Fraugster’s main AI engine (golang)</li>
-							<li>migration of the main ai engine to a container orchestrator (docker, kubernetes)</li>
-							<li>development of a platform for analytical simulations, model training and backtesting (kafka, postgresql, golang)</li>
-							<li>leading job interviews for software engineers and site reliability engineers</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">apr 2014 - mar 2016</div>
-				<div class="description">
-					<div class="short">Senior Software Engineer at Aroundhome (Remote / Berlin, Germany)</div>
-					<div class="details">I built the operations function (which was previously carried by the software development team) from scratch and was in charge of the maintenance and evolution of the application server infrastructure (bare metal)
-						<ul>
-							<li>implementation of configuration management and operation of the application server cluster (chef, debian, ~60 servers) and the companys load-balancers and reverse proxy servers (nginx)</li>
-							<li>setup of the monitoring infrastructure (logstash, elasticsearch, kibana, graphite, golang, ~3k events/s)</li>
-							<li>prototyping of a container based application server cluster and deployment infrastructure (coreos, kubernetes, docker, golang)</li>
-							<li>consulting for development teams</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">may 2012 - apr 2014</div>
-				<div class="description">
-					<div class="short">Software Engineer at Aroundhome (Berlin, Germany)</div>
-					<div class="details">Driving modernization initiatives for a Ruby on Rails monolith
-						<ul>
-							<li>Development of a high volume service for matching end customer requests to vendor offers focused on optimizing for customer preferences and global revenue optimization (ruby, mysql, redis)</li>
-							<li>Implementation of a numeric simulation based approach for automated search engine advertisement (ruby, mysql) in collaboration with the BI team, reducing initial simulation time from ~6h to ~30min over two major iterations</li>
-							<li>onboarding and mentoring of junior developers</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">nov 2009 - jan 2012</div>
-				<div class="description">
-					<div class="short">Software Engineer at Verti Versicherung AG (Teltow, Germany)</div>
-					<div class="details">Development of an IBM mainframe based multi-tier insurance system
-						<ul>
-							<li>development and maintenance of a mainframe based middleware (IBM CICS, CTG, WAS) used by several country subsidiaries</li>
-							<li>coordination between development teams of Direct Line Italy and RBS insurance India</li>
-							<li>implementation of enterprise application components (java se, spring)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">apr 2008 - apr 2009</div>
-				<div class="description">
-					<div class="short">Student research assistant at the Fraunhofer Institute for Open Communication Systems (Berlin, Germany)</div>
-					<div class="details">In charge of technical implementation in the context of the Autonomic Network Architecture Project (Information Society Technology, FP6) for the competence center Network Research
-						<ul>
-							<li>design of an adaptive monitoring system for ANA</li>
-							<li>specification and implementation of network-monitoring components (c99, GTK)</li>
-							<li>representation of the project at the ICT 2008, attendance to project-meetings and work on deliverables for the EU</li>
-							<li>Diploma Thesis in the context of the project</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">july 2007 - feb 2008</div>
-				<div class="description">
-					<div class="short">Intern at IBM Deutschland Research & Development GmbH (Böblingen, Germany)</div>
-					<div class="details">Development of a system to automate deployments of VM based environments for build verification tests in software development
-						<ul>
-							<li>design and setup of VMware clusters and SANs for VM-provisioning (vmware vi, rhel, debian, ibm x series, ibm ds4000)</li>
-							<li>development of components for the in-house monitoring solution (java se, php, c99)</li>
-							<li>documentation and user support (2nd, 3rd level)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">apr 2007 - apr 2009</div>
-				<div class="description">
-					<div class="short">Systems administrator at ubuntu-eu.org (Remote)</div>
-					<div class="details">Hosting and administration for european ubuntu locoteams, notably ubuntu-fr.org and ubuntuusers.de, with about 150.000 unique visitors a day
-						<ul>
-							<li>system-administration of the web cluster (ubuntu)</li>
-							<li>setup and administration of the mail system (exim, mailman, postfix)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">2007</div>
-				<div class="description">
-					<div class="short">Software Developer for Anterist+Schneider Automotive GmbH (Freelance, Saarlouis, Germany)</div>
-					<div class="details">Development of an application to support planning of internal logistics, especially pick routes for orders</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">2003</div>
-				<div class="description">
-					<div class="short">Intern at IKS, communal IT service provider for the city of Saarbrücken (Germany)</div>
-					<div class="details">1st level support for Windows workstations in the cities offices</div>
-				</div>
-			</div>
-
-			<div>
-				<div class="index">1999</div>
-				<div class="description">
-					<div class="short">Intern at Anterist+Schneider GmbH (Saarbrücken, Germany)</div>
-					<div class="details">Worked with the senior staff on the companys Token Ring installation</div>
-				</div>
-			</div>
-
-			<h2 class="section-header">Skills</h2>
-
-			<div id="development">
-				<div class="short">Software Development</div>
-				<ul class="skilllist">
-					<li>experience with different programming languages, paradigms and ecosystems (java, ruby, golang, c, perl, php, lua) with an emphasis on ruby and golang</li>
-					<li>agile software development practices and frameworks (tdd, pair programming, scrum, kanban)</li>
-					<li>defining software architecture and knowledge of common design pattern</li>
-					<li>setup and ownership of development infrastructure, integration and deployment processes (gitlab, capistrano, jenkins, continuum, maven, git, svn)</li>
+		<div class="timeline-entry">
+			<div class="index">oct 2016 - feb 2018</div>
+			<div class="description">
+				<div class="short">Senior Software Engineer at Fraugster Ltd. (Berlin, Germany)</div>
+				<div class="details">Development of an artificial intelligence based system for online fraud detection of credit card transactions
+				<ul>
+					<li>implementation of features for Fraugster’s main AI engine (golang)</li>
+					<li>migration of the main ai engine to a container orchestrator (docker, kubernetes)</li>
+					<li>development of a platform for analytical simulations, model training and backtesting (kafka, postgresql, golang)</li>
+					<li>leading job interviews for software engineers and site reliability engineers</li>
 				</ul>
+				</div>
 			</div>
+		</div>
 
-			<div id="operations">
-				<div class="short">Operations</div>
-				<ul class="skilllist">
-					<li>18 years of experience managing linux servers in diverse settings (debian, ubuntu, rhel, coreos, alpine)</li>
-					<li>proficient with configuration management and task automation (bash, ruby, golang, multi datacenter, chef) as well as infrastructure as code (terraform, pulumi, cdk) tools </li>
-					<li>knowledge of container (mostly docker) and virtualization technologies (virtualbox, kvm, vagrant, vmware enterprise products)</li>
-					<li>experience with kubernetes (v1.0.13-v1.32)</li>
-					<li>experience with Google Cloud Platform offerings (especially gke) and Amazon Web Services (ec2, ecs, eks, fargate)</li>
-					<li>log event and time series based monitoring (elasticsearch, logstash, fluentd, kibana, collectd, influxdb, graphite, grafana, some prometheus)</li>
-				</ul>
+		<div class="timeline-entry">
+			<div class="index">apr 2014 - mar 2016</div>
+			<div class="description">
+				<div class="short">Senior Software Engineer at Aroundhome (Remote / Berlin, Germany)</div>
+				<div class="details">I built the operations function (which was previously carried by the software development team) from scratch and was in charge of the maintenance and evolution of the application server infrastructure (bare metal)
+					<ul>
+						<li>implementation of configuration management and operation of the application server cluster (chef, debian, ~60 servers) and the companys load-balancers and reverse proxy servers (nginx)</li>
+						<li>setup of the monitoring infrastructure (logstash, elasticsearch, kibana, graphite, golang, ~3k events/s)</li>
+						<li>prototyping of a container based application server cluster and deployment infrastructure (coreos, kubernetes, docker, golang)</li>
+						<li>consulting for development teams</li>
+					</ul>
+				</div>
 			</div>
+		</div>
 
-			<div style="clear: both;"></div>
+		<div class="timeline-entry">
+			<div class="index">may 2012 - apr 2014</div>
+			<div class="description">
+				<div class="short">Software Engineer at Aroundhome (Berlin, Germany)</div>
+				<div class="details">Driving modernization initiatives for a Ruby on Rails monolith
+					<ul>
+						<li>Development of a high volume service for matching end customer requests to vendor offers focused on optimizing for customer preferences and global revenue optimization (ruby, mysql, redis)</li>
+						<li>Implementation of a numeric simulation based approach for automated search engine advertisement (ruby, mysql) in collaboration with the BI team, reducing initial simulation time from ~6h to ~30min over two major iterations</li>
+						<li>onboarding and mentoring of junior developers</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-			<h2 class="section-header">Education</h2>
+		<div class="timeline-entry">
+			<div class="index">nov 2009 - jan 2012</div>
+			<div class="description">
+				<div class="short">Software Engineer at Verti Versicherung AG (Teltow, Germany)</div>
+				<div class="details">Development of an IBM mainframe based multi-tier insurance system
+					<ul>
+						<li>development and maintenance of a mainframe based middleware (IBM CICS, CTG, WAS) used by several country subsidiaries</li>
+						<li>coordination between development teams of Direct Line Italy and RBS insurance India</li>
+						<li>implementation of enterprise application components (java se, spring)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
+		<div class="timeline-entry">
+			<div class="index">apr 2008 - apr 2009</div>
+			<div class="description">
+				<div class="short">Student research assistant at the Fraunhofer Institute for Open Communication Systems (Berlin, Germany)</div>
+				<div class="details">In charge of technical implementation in the context of the Autonomic Network Architecture Project (Information Society Technology, FP6) for the competence center Network Research
+					<ul>
+						<li>design of an adaptive monitoring system for ANA</li>
+						<li>specification and implementation of network-monitoring components (c99, GTK)</li>
+						<li>representation of the project at the ICT 2008, attendance to project-meetings and work on deliverables for the EU</li>
+						<li>Diploma Thesis in the context of the project</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-entry">
+			<div class="index">july 2007 - feb 2008</div>
+			<div class="description">
+				<div class="short">Intern at IBM Deutschland Research & Development GmbH (Böblingen, Germany)</div>
+				<div class="details">Development of a system to automate deployments of VM based environments for build verification tests in software development
+					<ul>
+						<li>design and setup of VMware clusters and SANs for VM-provisioning (vmware vi, rhel, debian, ibm x series, ibm ds4000)</li>
+						<li>development of components for the in-house monitoring solution (java se, php, c99)</li>
+						<li>documentation and user support (2nd, 3rd level)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-entry">
+			<div class="index">apr 2007 - apr 2009</div>
+			<div class="description">
+				<div class="short">Systems administrator at ubuntu-eu.org (Remote)</div>
+				<div class="details">Hosting and administration for european ubuntu locoteams, notably ubuntu-fr.org and ubuntuusers.de, with about 150.000 unique visitors a day
+					<ul>
+						<li>system-administration of the web cluster (ubuntu)</li>
+						<li>setup and administration of the mail system (exim, mailman, postfix)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-entry">
+			<div class="index">2007</div>
+			<div class="description">
+				<div class="short">Software Developer for Anterist+Schneider Automotive GmbH (Freelance, Saarlouis, Germany)</div>
+				<div class="details">Development of an application to support planning of internal logistics, especially pick routes for orders</div>
+			</div>
+		</div>
+
+		<div class="timeline-entry">
+			<div class="index">2003</div>
+			<div class="description">
+				<div class="short">Intern at IKS, communal IT service provider for the city of Saarbrücken (Germany)</div>
+				<div class="details">1st level support for Windows workstations in the cities offices</div>
+			</div>
+		</div>
+
+		<div class="timeline-entry">
+			<div class="index">1999</div>
+			<div class="description">
+				<div class="short">Intern at Anterist+Schneider GmbH (Saarbrücken, Germany)</div>
+				<div class="details">Worked with the senior staff on the companys Token Ring installation</div>
+			</div>
+		</div>
+
+		<h2 class="section-header">Skills</h2>
+
+		<div id="development">
+			<div class="short">Software Development</div>
+			<ul class="skilllist">
+				<li>experience with different programming languages, paradigms and ecosystems (java, ruby, golang, c, perl, php, lua) with an emphasis on ruby and golang</li>
+				<li>agile software development practices and frameworks (tdd, pair programming, scrum, kanban)</li>
+				<li>defining software architecture and knowledge of common design pattern</li>
+				<li>setup and ownership of development infrastructure, integration and deployment processes (gitlab, capistrano, jenkins, continuum, maven, git, svn)</li>
+			</ul>
+		</div>
+
+		<div id="operations">
+			<div class="short">Operations</div>
+			<ul class="skilllist">
+				<li>18 years of experience managing linux servers in diverse settings (debian, ubuntu, rhel, coreos, alpine)</li>
+				<li>proficient with configuration management and task automation (bash, ruby, golang, multi datacenter, chef) as well as infrastructure as code (terraform, pulumi, cdk) tools </li>
+				<li>knowledge of container (mostly docker) and virtualization technologies (virtualbox, kvm, vagrant, vmware enterprise products)</li>
+				<li>experience with kubernetes (v1.0.13-v1.32)</li>
+				<li>experience with Google Cloud Platform offerings (especially gke) and Amazon Web Services (ec2, ecs, eks, fargate)</li>
+				<li>log event and time series based monitoring (elasticsearch, logstash, fluentd, kibana, collectd, influxdb, graphite, grafana, some prometheus)</li>
+			</ul>
+		</div>
+
+		<div style="clear: both;"></div>
+
+		<h2 class="section-header">Education</h2>
+
+		<div class="timeline-entry">
 			<div class="index">2011</div>
 			<div class="description">
 				<div class="short">ITIL v3 Foundation</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2009</div>
 			<div class="description">
 				<div class="short">Sun Certified Programmer for the Java Platform</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2009</div>
 			<div class="description">
 				<div class="short">Diplom (FH) in Informatik</div>
 				<div class="details">University of applied sciences Saarbrücken, Germany</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2009</div>
 			<div class="description">
 				<div class="short">Maîtrise en génie mathématique et informatique</div>
 				<div class="details">Paul Verlaine University Metz, France</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2008</div>
-			<div class="description">
-				<div class="short">IBM zSummer university</div>
+				<div class="description">
+					<div class="short">IBM zSummer university</div>
+				</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2006</div>
 			<div class="description">
 				<div class="short">B.Sc. in Computer Science</div>
 				<div class="details">Paul Verlaine University Metz, France</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2003 - 2009</div>
 			<div class="description">
 				<div class="short">Studies in Computer Science</div>
 				<div class="details">Institut supérieur franco-allemand de techniques, d'économies et de sciences (ISFATES)</div>
 			</div>
+		</div>
 
+		<div class="timeline-entry">
 			<div class="index">2003</div>
 			<div class="description">
 				<div class="short">French and german university entrance diploma</div>
 				<div class="details">Deutsch-Französisches Gymnasium Saarbrücken, Germany</div>
 			</div>
+		</div>
 	</body>
 </html>
