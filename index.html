@@ -1,596 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Christoph Mertz">
-	<meta name="description" content="Christoph Mertz - Curriculum Vitae">
-	<title>Christoph Mertz - Curriculum Vitae</title>
+  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.7.45">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Christoph Mertz">
+  <meta name="description" content="Christoph Mertz - Curriculum Vitae">
+  <title>Christoph Mertz - Curriculum Vitae</title>
+  <style>
+                * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                }
 
-	<style>
-	/* Base reset and typography */
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+                :root {
+                        --primary-color: #4674cb;
+                        --text-color: #555;
+                        --text-black: #000;
+                        --border-color: #999;
+                        --spacing-xs: clamp(0.25rem, 1vw, 0.3125rem);
+                        --spacing-sm: clamp(0.5rem, 2vw, 0.625rem);
+                        --spacing-md: clamp(0.5rem, 2vw, 1rem);
+                        --spacing-lg: clamp(1rem, 3vw, 1.5625rem);
+                        --spacing-xl: clamp(1.5rem, 4vw, 2rem);
+                        --spacing-xxl: clamp(3rem, 8vw, 4rem);
+                        --font-base: clamp(0.875rem, 2vw, 1rem);
+                        --font-lg: clamp(1.25rem, 3vw, 1.5rem);
+                        --font-xl: clamp(1.75rem, 5vw, 2.5rem);
+                }
 
-	:root {
-		--primary-color: #4674cb;
-		--text-color: #555;
-		--text-black: #000;
-		--border-color: #999;
-		--spacing-xs: clamp(0.25rem, 1vw, 0.3125rem);
-		--spacing-sm: clamp(0.5rem, 2vw, 0.625rem);
-		--spacing-md: clamp(0.5rem, 2vw, 1rem);
-		--spacing-lg: clamp(1rem, 3vw, 1.5625rem);
-		--spacing-xl: clamp(1.5rem, 4vw, 2rem);
-		--font-base: clamp(0.875rem, 2vw, 1rem);
-		--font-lg: clamp(1.25rem, 3vw, 1.5rem);
-		--font-xl: clamp(1.75rem, 5vw, 2.5rem);
-	}
+                body {
+                        font-family: Verdana, Geneva, sans-serif;
+                        font-size: var(--font-base);
+                        color: var(--text-color);
+                        line-height: 1.4;
+                        width: min(95%, 60rem);
+                        margin: var(--spacing-md) auto;
+                        padding: 0 var(--spacing-md);
+                }
 
-	body {
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: var(--font-base);
-		color: var(--text-color);
-		line-height: 1.4;
-		width: min(95%, 50rem);
-		margin: var(--spacing-md) auto;
-		padding: 0 var(--spacing-md);
-	}
 
-	/* Header section */
-	.page-header {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--spacing-md);
-		margin-bottom: var(--spacing-xl);
-		position: relative;
-	}
+                .page-header {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: var(--spacing-md);
+                        margin-bottom: var(--spacing-xl);
+                        position: relative;
+                }
 
-	.header-content {
-		flex: 1;
-		min-width: 200px;
-	}
+                .header-content {
+                        flex: 1;
+                        min-width: 200px;
+                }
 
-	.page-header h1 {
-		color: var(--primary-color);
-		font-weight: normal;
-		font-size: var(--font-xl);
-		margin-bottom: 0.5rem;
-	}
+                .page-header h1 {
+                        color: var(--primary-color);
+                        font-weight: normal;
+                        font-size: var(--font-xl);
+                        margin-bottom: 0.5rem;
+                }
 
-	.personal-info {
-		font-style: italic;
-		color: var(--text-black);
-		margin-top: var(--spacing-md);
-	}
+                .personal-info {
+                        font-style: normal;
+                        font-size: 0.9em;
+                        color: var(--text-black);
+                        margin-top: var(--spacing-md);
+                        margin-left: var(--spacing-md);
+                }
 
-	.personal-info p {
-		margin: 0.2rem 0;
-	}
+                .profile-photo {
+                        width: clamp(5rem, 30%, 6.75rem);
+                        height: auto;
+                        aspect-ratio: 3/4;
+                        border: 1px solid var(--border-color);
+                        object-fit: cover;
+                }
 
-	.profile-photo {
-		width: clamp(5rem, 30%, 6.75rem);
-		height: auto;
-		aspect-ratio: 3/4;
-		border: 1px solid var(--border-color);
-		object-fit: cover;
-	}
+                .cv-section {
+                        margin-bottom: var(--spacing-xl);
+                }
 
-	/* Section styling */
-	.cv-section {
-		margin-bottom: var(--spacing-xl);
-	}
+                .summary {
+                        width: clamp(10rem, 50%, 20rem);
+                        margin-left: var(--spacing-md);
+                        margin-right: var(--spacing-xxl);
+                        margin-bottom: var(--spacing-xxl);
+                        margin-top: var(--spacing-xxl);
+                        font-style: italic;
+                }
 
-	.section-heading {
-		color: var(--primary-color);
-		font-weight: normal;
-		font-size: var(--font-lg);
-		border-bottom: 1px dashed var(--primary-color);
-		padding-bottom: 0.1875rem;
-		margin-bottom: var(--spacing-xl);
-	}
+                .summary p {
+                        margin-bottom: var(--spacing-md);
+                }
 
-	/* Timeline entries */
-	.timeline-entry {
-		margin-bottom: var(--spacing-lg);
-	}
+                .section-heading {
+                        color: var(--primary-color);
+                        font-weight: normal;
+                        font-size: var(--font-lg);
+                        border-bottom: 1px dashed var(--primary-color);
+                        padding-bottom: 0.1875rem;
+                        margin-bottom: var(--spacing-xl);
+                }
 
-	.entry-header {
-		color: var(--text-black);
-		margin-bottom: var(--spacing-md);
-	}
+                .timeline-entry {
+                        margin-bottom: var(--spacing-lg);
+                        margin-left: var(--spacing-lg);
+                }
 
-	.entry-content h3 {
-		font-style: italic;
-		font-weight: normal;
-		color: var(--text-black);
-		margin-bottom: 0.3125rem;
-	}
+                .entry-header {
+                        color: var(--text-black);
+                        margin-bottom: var(--spacing-md);
+                        font-size: 0.9em;
+                        hyphens: manual;
+                        margin-top: 0.3em;
+                }
 
-	.entry-description {
-		margin-left: var(--spacing-sm);
-	}
+                .entry-content h3 {
+                        font-style: italic;
+                        font-weight: normal;
+                        color: var(--text-black);
+                        margin-bottom: 0.3125rem;
+                }
 
-	/* Lists */
-	.achievements,
-	.skill-list {
-		list-style: disc;
-		margin-left: clamp(1rem, 3vw, 1.5625rem);
-	}
+                .entry-description {
+                        margin-left: var(--spacing-sm);
+                }
 
-	.achievements li,
-	.skill-list li {
-		margin-top: var(--spacing-xs);
-	}
+                .achievements,
+                .skill-list {
+                        list-style: square;
+                        margin-left: clamp(1.5rem, 4vw, 2rem);
+                }
 
-	/* Skills section */
-	.skills-container {
-		display: grid;
-		gap: var(--spacing-xl);
-	}
+                .achievements li,
+                .skill-list li {
+                        margin-top: var(--spacing-xs);
+                }
 
-	.skill-category h3 {
-		font-style: italic;
-		font-weight: normal;
-		color: var(--text-black);
-		margin-bottom: 0.5rem;
-	}
+                .skills-container {
+                        display: grid;
+                        gap: var(--spacing-xl);
+                        margin-left: var(--spacing-lg);
+                }
 
-	/* Desktop layout */
-	@media (min-width: 48rem) {
-		body {
-			margin: 2rem auto;
-		}
+                .skill-category h3 {
+                        font-style: italic;
+                        font-weight: normal;
+                        color: var(--text-black);
+                        margin-bottom: 0.5rem;
+                }
 
-		.header-content {
-			max-width: calc(100% - 8rem);
-		}
+                @media (min-width: 48rem) {
+                        body {
+                                margin: 2rem auto;
+                        }
 
-		.profile-photo {
-			position: absolute;
-			top: 0;
-			right: 0;
-		}
+                        .header-content {
+                                max-width: calc(100% - 8rem);
+                        }
 
-		.timeline-entry {
-			display: grid;
-			grid-template-columns: clamp(8rem, 20%, 11.25rem) 1fr;
-			gap: 0 1rem;
-		}
+                        .profile-photo {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                        }
 
-		.entry-header {
-			margin-bottom: 0;
-		}
+                        .timeline-entry {
+                                display: grid;
+                                grid-template-columns: clamp(8rem, 20%, 11.25rem) 1fr;
+                                gap: 0 1rem;
+                        }
 
-		.skills-container {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+                        .entry-header {
+                                margin-bottom: 0;
+                        }
 
-	/* Accessibility */
-	@media (prefers-contrast: high) {
-		:root {
-			--primary-color: #00f;
-			--text-color: #000;
-		}
-	}
+                        .skills-container {
+                                grid-template-columns: repeat(2, 1fr);
+                        }
+                }
 
-	@media (prefers-reduced-motion: reduce) {
-		*,
-		*::before,
-		*::after {
-			animation-duration: 0.01ms !important;
-			animation-iteration-count: 1 !important;
-			transition-duration: 0.01ms !important;
-		}
-	}
+                @media (prefers-contrast: high) {
+                        :root {
+                                --primary-color: #00f;
+                                --text-color: #000;
+                        }
+                }
 
-	/* Print styles */
-	@media print {
-		@page {
-			size: A4;
-			margin: 1.5cm 2.5cm;
-		}
+                @media (prefers-reduced-motion: reduce) {
+                        *,
+                                *::before,
+                                *::after {
+                                        animation-duration: 0.01ms !important;
+                                        animation-iteration-count: 1 !important;
+                                        transition-duration: 0.01ms !important;
+                                }
+                }
 
-		:root {
-			--spacing-md: 0.5rem;
-			--font-base: 0.8rem;
-			--spacing-xl: 1rem;
-		}
+                @media print {
+                        @page {
+                                size: A4;
+                                margin: 1.5cm 2.5cm;
+                        }
 
-		body {
-			width: 100%;
-			margin: 0;
-			padding: 0;
-		}
+                        :root {
+                                --spacing-md: 0.5rem;
+                                --font-base: 0.8rem;
+                                --spacing-lg: 0.5rem;
+                                --spacing-xl: 0.75rem;
+                        }
 
-		.page-header {
-			margin-bottom: 1rem;
-		}
+                        body {
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                        }
 
-		.header-content {
-			max-width: calc(100% - 6rem);
-		}
+                        .page-header {
+                                margin-bottom: 1rem;
+                        }
 
-		.profile-photo {
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 4.5rem;
-		}
+                        .header-content {
+                                max-width: calc(100% - 6rem);
+                        }
 
-		.page-header h1 {
-			font-size: 1.8rem;
-		}
+                        .profile-photo {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 4.5rem;
+                        }
 
-		.section-heading {
-			font-size: 1.2rem;
-			margin-bottom: 0.75rem;
-			page-break-after: avoid;
-			break-after: avoid;
-		}
+                        .page-header h1 {
+                                font-size: 1.8rem;
+                        }
 
-		.timeline-entry {
-			display: grid;
-			grid-template-columns: 8rem 1fr;
-			gap: 0 0.5rem;
-			margin-bottom: 0.75rem;
-			page-break-inside: avoid;
-			break-inside: avoid;
-		}
+                        .section-heading {
+                                font-size: 1.2rem;
+                                margin-bottom: 0.75rem;
+                                page-break-after: avoid;
+                                break-after: avoid;
+                        }
 
-		.skills-container {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1rem;
-		}
-	}
-	</style>
+                        .timeline-entry {
+                                display: grid;
+                                grid-template-columns: 8rem 1fr;
+                                gap: 0 0.5rem;
+                                margin-bottom: 0.5rem;
+                                page-break-inside: avoid;
+                                break-inside: avoid;
+                        }
+
+                        .achievements li {
+                                margin-top: 0.1rem;
+                        }
+
+                        .skills-container {
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 1rem;
+                        }
+
+                        *[data-print="false"] {
+                                display: none;
+                        }
+                }
+  </style>
 </head>
-
 <body>
-	<header class="page-header" role="banner">
-		<div class="header-content">
-			<h1>Christoph Mertz</h1>
-			<div class="personal-info">
-				<p>born 1984</p>
-				<p>French nationality</p>
-				<p>living in Berlin, Germany</p>
-			</div>
-		</div>
-		<img class="profile-photo" src="./photo.jpg" alt="Christoph Mertz">
-	</header>
-
-	<main>
-		<section class="cv-section experience" aria-labelledby="experience-heading">
-			<h2 id="experience-heading" class="section-heading">Experience</h2>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2021-08">August 2021</time> - Present
-				</header>
-				<div class="entry-content">
-					<h3>Staff Engineer at Apheris AI GmbH (Berlin / Remote)</h3>
-					<p class="entry-description">Building a secure platform for distributed computations to enable federated learning.</p>
-					<ul class="achievements">
-						<li>technical lead of a team of 3, company internal and external consulting on all things system design, infrastructure</li>
-						<li>evolved the cloud infrastructure from an MVP to a production ready system (standardization and scaling of IaC setups by a factor of 10, covering multi region support and coordinating initial series of external penetration tests)</li>
-						<li>design, implementation and delivery of customer managed computation environments (Apheris Compute Gateway), spanning infrastructure components and kubernetes controllers (k8s, tf, go)</li>
-						<li>introduced golang, now adopted by the entire software engineering org (bootstrapping through a group of champions and select components, establishment of an interest group with regular small training sessions)</li>
-						<li>screening, interviewing and onboarding across several engineering functions (~50 interviews)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2021-02">February 2021</time> - <time datetime="2021-05">May 2021</time>
-				</header>
-				<div class="entry-content">
-					<h3>Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Remote)</h3>
-					<p class="entry-description">Optimization of a new gitops system for an increased deployment velocity for the developer productivity engineering team</p>
-					<ul class="achievements">
-						<li>automated migration of helm based kubernetes workloads to kustomize (helm2/3, kustomize, fluxcd2, python)</li>
-						<li>implementation of automated kubernetes manifest validation for development teams (some 500k lines of yaml, openapi, open policy agent, rego)</li>
-						<li>debugging and removal of performance bottlenecks and throughput issues in the gitops system (fluxcd2, golang, git)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2020-08">August 2020</time> - <time datetime="2020-12">December 2020</time>
-				</header>
-				<div class="entry-content">
-					<h3>Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Freelance, Remote)</h3>
-					<p class="entry-description">Modernization of the existing infrastructure as code setup for google cloud for the developer productivity engineering team</p>
-					<ul class="achievements">
-						<li>automation of provisioning and maintenance of production and pre-production kubernetes clusters (kubernetes, gke, pulumi-python, jenkins)</li>
-						<li>implementation of a gitops system for kubernetes to replace an aging fleet of Jenkins servers (fluxcd2, golang, git)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2019-07">July 2019</time> - <time datetime="2020-11">November 2020</time>
-				</header>
-				<div class="entry-content">
-					<h3>Lead Cloud Engineer for elearnio GmbH (Freelance, Remote)</h3>
-					<p class="entry-description">Provided elearnio with a standardized and automated delivery system and cloud infrastructure, enabling high delivery velocity and optimized for operator time.</p>
-					<ul class="achievements">
-						<li>implementation of aws ecs based clusters (aws ecs, fargate, terraform)</li>
-						<li>setup and maintenance of a continuous delivery system (gitlab ci, terraform, ruby)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2018-03">March 2018</time> - <time datetime="2019-10">October 2019</time>
-				</header>
-				<div class="entry-content">
-					<h3>Lead Infrastructure Engineer for Shuttle Holdings (Freelance, Remote)</h3>
-					<p class="entry-description">In charge of infrastructure development for a white-label cryptocurrency exchange product.</p>
-					<ul class="achievements">
-						<li>implementation of kubernetes based system (kubernetes, helm, golang) and continuous delivery system (gitlab, cloudbuild) for a fleet of 40 distinct services over multiple environments</li>
-						<li>setup and operations of crypto-currency nodes, notably a setup for a full archive ethereum node reaching the performance limits of GCP offerings at the time (and one of a handful of nodes with a similar setup worldwide in 2018)</li>
-						<li>vendoring of (almost) the entirety of the systems dependencies to protect against targeted attacks (npm, golang, docker)</li>
-						<li>setup of a highly available KDB+ based ticker system for cryptocurrency pairs</li>
-						<li>building reliability into the core product (golang)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2016-10">October 2016</time> - <time datetime="2018-02">February 2018</time>
-				</header>
-				<div class="entry-content">
-					<h3>Senior Software Engineer at Fraugster Ltd. (Berlin, Germany)</h3>
-					<p class="entry-description">Development of an artificial intelligence based system for online fraud detection of credit card transactions</p>
-					<ul class="achievements">
-						<li>implementation of features for Fraugster's main AI engine (golang)</li>
-						<li>migration of the main ai engine to a container orchestrator (docker, kubernetes)</li>
-						<li>development of a platform for analytical simulations, model training and backtesting (kafka, postgresql, golang)</li>
-						<li>leading job interviews for software engineers and site reliability engineers</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2014-04">April 2014</time> - <time datetime="2016-03">March 2016</time>
-				</header>
-				<div class="entry-content">
-					<h3>Senior Software Engineer at Aroundhome (Remote / Berlin, Germany)</h3>
-					<p class="entry-description">I built the operations function (which was previously carried by the software development team) from scratch and was in charge of the maintenance and evolution of the application server infrastructure (bare metal)</p>
-					<ul class="achievements">
-						<li>implementation of configuration management and operation of the application server cluster (chef, debian, ~60 servers) and the company's load-balancers and reverse proxy servers (nginx)</li>
-						<li>setup of the monitoring infrastructure (logstash, elasticsearch, kibana, graphite, golang, ~3k events/s)</li>
-						<li>prototyping of a container based application server cluster and deployment infrastructure (coreos, kubernetes, docker, golang)</li>
-						<li>consulting for development teams</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2012-05">May 2012</time> - <time datetime="2014-04">April 2014</time>
-				</header>
-				<div class="entry-content">
-					<h3>Software Engineer at Aroundhome (Berlin, Germany)</h3>
-					<p class="entry-description">Driving modernization initiatives for a Ruby on Rails monolith</p>
-					<ul class="achievements">
-						<li>Development of a high volume service for matching end customer requests to vendor offers focused on optimizing for customer preferences and global revenue optimization (ruby, mysql, redis)</li>
-						<li>Implementation of a numeric simulation based approach for automated search engine advertisement (ruby, mysql) in collaboration with the BI team, reducing initial simulation time from ~6h to ~30min over two major iterations</li>
-						<li>onboarding and mentoring of junior developers</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2009-11">November 2009</time> - <time datetime="2012-01">January 2012</time>
-				</header>
-				<div class="entry-content">
-					<h3>Software Engineer at Verti Versicherung AG (Teltow, Germany)</h3>
-					<p class="entry-description">Development of an IBM mainframe based multi-tier insurance system</p>
-					<ul class="achievements">
-						<li>development and maintenance of a mainframe based middleware (IBM CICS, CTG, WAS) used by several country subsidiaries</li>
-						<li>coordination between development teams of Direct Line Italy and RBS insurance India</li>
-						<li>implementation of enterprise application components (java se, spring)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2008-04">April 2008</time> - <time datetime="2009-04">April 2009</time>
-				</header>
-				<div class="entry-content">
-					<h3>Student research assistant at the Fraunhofer Institute for Open Communication Systems (Berlin, Germany)</h3>
-					<p class="entry-description">In charge of technical implementation in the context of the Autonomic Network Architecture Project (Information Society Technology, FP6) for the competence center Network Research</p>
-					<ul class="achievements">
-						<li>design of an adaptive monitoring system for ANA</li>
-						<li>specification and implementation of network-monitoring components (c99, GTK)</li>
-						<li>representation of the project at the ICT 2008, attendance to project-meetings and work on deliverables for the EU</li>
-						<li>Diploma Thesis in the context of the project</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2007-07">July 2007</time> - <time datetime="2008-02">February 2008</time>
-				</header>
-				<div class="entry-content">
-					<h3>Intern at IBM Deutschland Research & Development GmbH (Böblingen, Germany)</h3>
-					<p class="entry-description">Development of a system to automate deployments of VM based environments for build verification tests in software development</p>
-					<ul class="achievements">
-						<li>design and setup of VMware clusters and SANs for VM-provisioning (vmware vi, rhel, debian, ibm x series, ibm ds4000)</li>
-						<li>development of components for the in-house monitoring solution (java se, php, c99)</li>
-						<li>documentation and user support (2nd, 3rd level)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2007-04">April 2007</time> - <time datetime="2009-04">April 2009</time>
-				</header>
-				<div class="entry-content">
-					<h3>Systems administrator at ubuntu-eu.org (Remote)</h3>
-					<p class="entry-description">Hosting and administration for european ubuntu locoteams, notably ubuntu-fr.org and ubuntuusers.de, with about 150.000 unique visitors a day</p>
-					<ul class="achievements">
-						<li>system-administration of the web cluster (ubuntu)</li>
-						<li>setup and administration of the mail system (exim, mailman, postfix)</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2007">2007</time>
-				</header>
-				<div class="entry-content">
-					<h3>Software Developer for Anterist+Schneider Automotive GmbH (Freelance, Saarlouis, Germany)</h3>
-					<p class="entry-description">Development of an application to support planning of internal logistics, especially pick routes for orders</p>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2003">2003</time>
-				</header>
-				<div class="entry-content">
-					<h3>Intern at IKS, communal IT service provider for the city of Saarbrücken (Germany)</h3>
-					<p class="entry-description">1st level support for Windows workstations in the cities offices</p>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="1999">1999</time>
-				</header>
-				<div class="entry-content">
-					<h3>Intern at Anterist+Schneider GmbH (Saarbrücken, Germany)</h3>
-					<p class="entry-description">Worked with the senior staff on the company's Token Ring installation</p>
-				</div>
-			</article>
-		</section>
-
-		<section class="cv-section skills" aria-labelledby="skills-heading">
-			<h2 id="skills-heading" class="section-heading">Skills</h2>
-
-			<div class="skills-container">
-				<div class="skill-category">
-					<h3>Software Development</h3>
-					<ul class="skill-list">
-						<li>experience with different programming languages, paradigms and ecosystems (java, ruby, golang, c, perl, php, lua) with an emphasis on ruby and golang</li>
-						<li>agile software development practices and frameworks (tdd, pair programming, scrum, kanban)</li>
-						<li>defining software architecture and knowledge of common design pattern</li>
-						<li>setup and ownership of development infrastructure, integration and deployment processes (gitlab, capistrano, jenkins, continuum, maven, git, svn)</li>
-					</ul>
-				</div>
-
-				<div class="skill-category">
-					<h3>Operations</h3>
-					<ul class="skill-list">
-						<li>18 years of experience managing linux servers in diverse settings (debian, ubuntu, rhel, coreos, alpine)</li>
-						<li>proficient with configuration management and task automation (bash, ruby, golang, multi datacenter, chef) as well as infrastructure as code (terraform, pulumi, cdk) tools</li>
-						<li>knowledge of container (mostly docker) and virtualization technologies (virtualbox, kvm, vagrant, vmware enterprise products)</li>
-						<li>experience with kubernetes (v1.0.13-v1.32)</li>
-						<li>experience with Google Cloud Platform offerings (especially gke) and Amazon Web Services (ec2, ecs, eks, fargate)</li>
-						<li>log event and time series based monitoring (elasticsearch, logstash, fluentd, kibana, collectd, influxdb, graphite, grafana, some prometheus)</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="cv-section education" aria-labelledby="education-heading">
-			<h2 id="education-heading" class="section-heading">Education</h2>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2011">2011</time>
-				</header>
-				<div class="entry-content">
-					<h3>ITIL v3 Foundation</h3>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2009">2009</time>
-				</header>
-				<div class="entry-content">
-					<h3>Sun Certified Programmer for the Java Platform</h3>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2009">2009</time>
-				</header>
-				<div class="entry-content">
-					<h3>Diplom (FH) in Informatik</h3>
-					<p class="entry-description">University of applied sciences Saarbrücken, Germany</p>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2009">2009</time>
-				</header>
-				<div class="entry-content">
-					<h3>Maîtrise en génie mathématique et informatique</h3>
-					<p class="entry-description">Paul Verlaine University Metz, France</p>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2008">2008</time>
-				</header>
-				<div class="entry-content">
-					<h3>IBM zSummer university</h3>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2006">2006</time>
-				</header>
-				<div class="entry-content">
-					<h3>B.Sc. in Computer Science</h3>
-					<p class="entry-description">Paul Verlaine University Metz, France</p>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2003">2003</time> - <time datetime="2009">2009</time>
-				</header>
-				<div class="entry-content">
-					<h3>Studies in Computer Science</h3>
-					<p class="entry-description">Institut supérieur franco-allemand de techniques, d'économies et de sciences (ISFATES)</p>
-				</div>
-			</article>
-
-			<article class="timeline-entry">
-				<header class="entry-header">
-					<time datetime="2003">2003</time>
-				</header>
-				<div class="entry-content">
-					<h3>French and german university entrance diploma</h3>
-					<p class="entry-description">Deutsch-Französisches Gymnasium Saarbrücken, Germany</p>
-				</div>
-			</article>
-		</section>
-	</main>
+  <header class="page-header" role="banner">
+    <div class="header-content">
+      <h1>Christoph Mertz</h1>
+      <div class="personal-info">
+        <p>French nationality<br>
+        living in Berlin, Germany</p>
+      </div>
+    </div><img class="profile-photo" src="./photo.jpg" alt="Christoph Mertz">
+  </header>
+  <main>
+    <section class="cv-section experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="section-heading">Experience</h2>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2021-08">since aug 2021</time>
+        </header>
+        <div class="entry-content">
+          <h3>Staff Engineer at Apheris AI GmbH (Berlin / Remote)</h3>
+          <p class="entry-description">Building a secure platform for distributed computations to enable federated learning in regulated and IP sensitive industries.</p>
+          <ul class="achievements">
+            <li>Having built the infrastructure function at Apheris, I currently lead a team of 3 infrastructure engineers and am the technical owner of the cloud infrastructure that supports internal product teams and deployments with global top pharma and lifesciences companies</li>
+            <li>Design, implementation and delivery of customer-managed execution environments (Apheris Compute Gateway), spanning infrastructure components and Kubernetes controllers, enabling customers to run sensitive workloads in their own environments without exposing raw data</li>
+            <li>Scaled cloud infrastructure from MVP to production platform, standardizing infrastructure-as-code and deployment patterns to support multi-region deployments</li>
+            <li>Drove the introduction and adoption of Go as first-class language for development by seeding adoption via a champions group, introducing shared components, and running recurring internal training, leading to organization-wide usage.</li>
+            <li>Influenced engineering quality and hiring by leading interview loops (&gt; 70 interviews) across multiple engineering functions and onboarding new engineers.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2020-08">aug 2020</time> - <time datetime="2021-05">may 2021</time>
+        </header>
+        <div class="entry-content">
+          <h3>Cloud Engineer / DevOps Engineer for Kiwigrid GmbH (Freelance, Remote)</h3>
+          <p class="entry-description">Modernization of the existing infrastructure as code setup for google cloud and implementation of a new gitops system for an increased deployment velocity for the developer productivity engineering team</p>
+          <ul class="achievements">
+            <li>Automated provisioning and maintenance of production and pre-production kubernetes clusters on Google Kubernetes Engine</li>
+            <li>Implemented a gitops system for kubernetes to replace an aging fleet of Jenkins servers (flux2, golang), including automated migration of kubernetes workloads and debugging and removal of performance bottlenecks and throughput issues in the gitops system</li>
+            <li>Designed and implemented automated kubernetes manifest validation of some 500k lines of manifests for development teams, slashing defect rates by a factor of 4</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2019-07">jul 2019</time> - <time datetime="2020-11">nov 2020</time>
+        </header>
+        <div class="entry-content">
+          <h3>Lead Cloud Engineer for elearnio GmbH (Freelance, Remote)</h3>
+          <p class="entry-description">Provided elearnio with a standardized and automated delivery system and cloud infrastructure, enabling high delivery velocity; optimized for operator time and cloud spend</p>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2018-03">mar 2018</time> - <time datetime="2019-10">oct 2019</time>
+        </header>
+        <div class="entry-content">
+          <h3>Lead Infrastructure Engineer for Shuttle Holdings (Freelance, Remote)</h3>
+          <p class="entry-description">Infrastructure development for a white-label cryptocurrency exchange product</p>
+          <ul class="achievements">
+            <li>Implementation of kubernetes based hosting and continuous delivery system for a fleet of &gt; 40 distinct services over multiple environments</li>
+            <li>Setup and operation of cryptocurrency nodes, including a full archive Ethereum node that pushed Google Cloud Platform to its performance limits, one of fewer than ten such nodes operating worldwide in 2018</li>
+            <li>Build a highly available Kx Systems KDB+ based ticker system for cryptocurrency pairs, the first such deployment on a hyperscaler</li>
+            <li>Extensive vendoring of the entirety of the systems dependencies to protect against supply chain attacks</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2016-10">oct 2016</time> - <time datetime="2018-02">feb 2018</time>
+        </header>
+        <div class="entry-content">
+          <h3>Senior Software Engineer at Fraugster Ltd. (Berlin, Germany)</h3>
+          <p class="entry-description">Development of massively parallel online scoring system for online fraud detection of credit card transactions</p>
+          <ul class="achievements">
+            <li>Development of a platform for analytical simulations, model training and backtesting enabling Fraugster to train models on credit card transaction data in multiple jurisdictions</li>
+            <li>Migration of the main engine to a container orchestrator (docker, kubernetes)</li>
+            <li>Leading job interviews for software engineers and site reliability engineers (~100 interviews)</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2014-04">apr 2014</time> - <time datetime="2016-03">mar 2016</time>
+        </header>
+        <div class="entry-content">
+          <h3>Senior Software Engineer at Aroundhome (Remote / Berlin, Germany)</h3>
+          <p class="entry-description">I built the operations function and was in charge of the maintenance and evolution of the infrastructure and reliability</p>
+          <ul class="achievements">
+            <li>Implementation of configuration management and operation of the application server cluster (~60 bare metal servers) and the company's load-balancers and reverse proxys serving ~200 support staff and customers of the company</li>
+            <li>Setup of monitoring infrastructure (capable of handling sustained 3k events/s), bootstrapping work on relibility and leading to a reduction of reliability issues by ~40% (logstash, elasticsearch, kibana, graphite)</li>
+            <li>Prototyping and rollout of a container based application server cluster and deployment infrastructure (coreos, kubernetes, docker, golang)</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2012-05">may 2012</time> - <time datetime="2014-04">april 2014</time>
+        </header>
+        <div class="entry-content">
+          <h3>Software Engineer at Aroundhome (Berlin, Germany)</h3>
+          <p class="entry-description">Driving modernization initiatives for a Ruby on Rails monolith</p>
+          <ul class="achievements">
+            <li>Development of a high volume service for matching end customer requests to vendor offers focused on optimizing for customer preferences and global revenue optimization (~300rps during working hours), driving an &gt; 20% reduction in online advertisment spend</li>
+            <li>Implementation of a numeric simulation based approach for automated search engine advertisement (ruby, mysql) in collaboration with the BI team, reducing initial simulation time from ~6h to ~30min over two major iterations</li>
+            <li>Coordination of university student projects and onboarding and mentoring of junior developers</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2009-11">nov 2009</time> - <time datetime="2012-01">jan 2012</time>
+        </header>
+        <div class="entry-content">
+          <h3>Software Engineer at Verti Versicherung AG (Teltow, Germany)</h3>
+          <p class="entry-description">Development of an IBM mainframe based multi-tier insurance system</p>
+          <ul class="achievements">
+            <li>Development and maintenance of a mainframe based middleware to interface a legacy COBOL based insurance system with Java application servers, used by 3 country subsidiaries (IBM CICS and CTG)</li>
+            <li>Coordination between development teams of Direct Line Italy and RBS insurance India</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2008-04">apr 2008</time> - <time datetime="2009-04">apr 2009</time>
+        </header>
+        <div class="entry-content">
+          <h3>Student research assistant at the Fraunhofer Institute for Open Communication Systems (Berlin, Germany)</h3>
+          <p class="entry-description">In charge of technical implementation in the context of the Autonomic Network Architecture Project (Information Society Technology, FP6) for the competence center Network Research</p>
+          <ul class="achievements">
+            <li>Design of an adaptive monitoring system for ANA, specification and implementation of network-monitoring components (linux kernel, c99)</li>
+            <li>Representation of the project at the ICT 2008, attendance to project-meetings and work on deliverables for the EU</li>
+          </ul>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2007-07">jul 2007</time> - <time datetime="2008-02">feb 2008</time>
+        </header>
+        <div class="entry-content">
+          <h3>Intern at IBM Deutschland Research & Development GmbH (Böblingen, Germany)</h3>
+          <p class="entry-description">Development of a system to automate deployments of VM based environments for build verification tests in software development hosted on VMware clusters backed by DS4000 SANs, replacing a test farm of ~100 physical workstations</p>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2007-04">apr 2007</time> - <time datetime="2009-04">apr 2009</time>
+        </header>
+        <div class="entry-content">
+          <h3>Systems administrator at ubuntu-eu.org (Remote)</h3>
+          <p class="entry-description">Hosting and administration for european ubuntu locoteams, notably ubuntu-fr.org and ubuntuusers.de, with about 150.000 unique visitors a day</p>
+        </div>
+      </article>
+      <article class="timeline-entry" data-print="false">
+        <header class="entry-header">
+          <time datetime="2007">2007</time>
+        </header>
+        <div class="entry-content">
+          <h3>Software Developer for Anterist+Schneider Automotive GmbH (Freelance, Saarlouis, Germany)</h3>
+        </div>
+      </article>
+      <article class="timeline-entry" data-print="false">
+        <header class="entry-header">
+          <time datetime="2003">2003</time>
+        </header>
+        <div class="entry-content">
+          <h3>Intern at IKS, communal IT service provider for the city of Saarbrücken (Germany)</h3>
+        </div>
+      </article>
+      <article class="timeline-entry" data-print="false">
+        <header class="entry-header">
+          <time datetime="1999">1999</time>
+        </header>
+        <div class="entry-content">
+          <h3>Intern at Anterist+Schneider GmbH (Saarbrücken, Germany)</h3>
+        </div>
+      </article>
+    </section>
+    <section class="cv-section skills" aria-labelledby="skills-heading" data-print="false">
+      <h2 id="skills-heading" class="section-heading">Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Software Development</h3>
+          <ul class="skill-list">
+            <li><strong>Primary languages:</strong> Go (production systems, infrastructure tooling, Kubernetes controllers), Ruby (backend systems, automation); additional experience with Java and C</li>
+            <li>Defining system architecture and design, building for diverse constraints</li>
+            <li>Agile software development practices and frameworks (TDD, pair programming, Scrum, Kanban)</li>
+            <li>Ownership of development infrastructure, CI/CD pipelines, and integration workflows (GitLab CI, Jenkins, Git, Maven)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Infrastructure & Operations</h3>
+          <ul class="skill-list">
+            <li><strong>Cloud platforms:</strong> Google Cloud Platform (GKE) and Amazon Web Services (EC2, ECS, EKS, Fargate)</li>
+            <li><strong>Kubernetes:</strong> hands-on experience from early versions (v1.0.13) to modern production clusters (v1.35), including platform design and operations</li>
+            <li>18+ years of Linux systems engineering across diverse environments (Debian, Ubuntu, RHEL, CoreOS, Alpine)</li>
+            <li>Log event and time series based monitoring (elasticsearch, logstash, fluentd, kibana, collectd, influxdb, graphite, grafana, some prometheus)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cv-section education" aria-labelledby="education-heading">
+      <h2 id="education-heading" class="section-heading">Education</h2>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2011">2011</time>
+        </header>
+        <div class="entry-content">
+          <h3>ITIL v3 Foundation</h3>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2009">2009</time>
+        </header>
+        <div class="entry-content">
+          <h3>Sun Certified Programmer for the Java Platform</h3>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2009">2009</time>
+        </header>
+        <div class="entry-content">
+          <h3>Diplom (FH) in Informatik</h3>
+          <p class="entry-description">University of applied sciences Saarbrücken, Germany</p>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2009">2009</time>
+        </header>
+        <div class="entry-content">
+          <h3>Maîtrise en génie mathématique et informatique</h3>
+          <p class="entry-description">Paul Verlaine University Metz, France</p>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2008">2008</time>
+        </header>
+        <div class="entry-content">
+          <h3>IBM zSummer university</h3>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2006">2006</time>
+        </header>
+        <div class="entry-content">
+          <h3>B.Sc. in Computer Science</h3>
+          <p class="entry-description">Paul Verlaine University Metz, France</p>
+        </div>
+      </article>
+      <article class="timeline-entry">
+        <header class="entry-header">
+          <time datetime="2003">2003</time><br>
+          <time datetime="2009">2009</time>
+        </header>
+        <div class="entry-content">
+          <h3>Studies in Computer Science</h3>
+          <p class="entry-description">Institut supérieur franco-allemand de techniques, d'économies et de sciences (ISFATES)</p>
+        </div>
+      </article>
+      <article class="timeline-entry" data-print="false">
+        <header class="entry-header">
+          <time datetime="2003">2003</time>
+        </header>
+        <div class="entry-content">
+          <h3>French and german university entrance diploma</h3>
+          <p class="entry-description">Deutsch-Französisches Gymnasium Saarbrücken, Germany</p>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
-
